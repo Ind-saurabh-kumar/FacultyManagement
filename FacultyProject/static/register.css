@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+#section1{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(208, 148, 69);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#section1 .projname{
+    font-size: 45px;
+    color: rgb(72, 69, 55);
+    
+}
+
+
+#sec1Cont{
+    height: 70%;
+    width: 80%;
+    /* background-color: rgb(32, 31, 31);
+    border:2px solid rgb(231, 193, 193);
+    border-radius: 25px;
+    box-shadow: 1px 4px 35px 10px rgb(205, 204, 202); */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.sec1leftCont{
+    height: 100%;
+    width: 45%;
+    background-color: rgb(32, 31, 31);
+    border:2px solid rgb(231, 193, 193);
+    border-radius: 25px;
+    box-shadow: 1px 4px 35px 10px rgb(205, 204, 202);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+#sec1Cont h1{
+    color: white;
+}
+
+
+.inputOption{
+
+    height: 70%;
+    width: 90%;
+    background-color: rgb(32, 31, 31);
+    
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+
+.initem{
+
+    height: 15%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px
+    
+}
+
+.inputOption form{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px
+
+}
+
+
+
+.initem input{
+    height: 70%;
+    width: 100%;
+    background-color: rgb(91, 89, 87);
+    border:2px solid rgb(208, 52, 52);
+    outline-color:rgb(208, 52, 52) ;
+    border-radius: 25px;
+    padding-left: 20px;
+    font-size:20px;
+    color: white;
+    
+}
+
+.initem input:hover{
+    box-shadow: 4px 4px 25px 6px  gold;
+}
+
+
+.initem input::placeholder{
+    color: rgb(188, 185, 185)
+}
+
+.initem input:focus{
+    border:2px solid white;
+}
+
+.initem #dept{
+    height: 70%;
+    width: 100%;
+    background-color: rgb(91, 89, 87);
+    border:2px solid rgb(208, 52, 52);
+    outline-color:rgb(208, 52, 52) ;
+    border-radius: 25px;
+    padding-left: 20px;
+    font-size:20px;
+    color: rgb(206, 199, 199);
+
+}
+
+.initem #dept:hover{
+    box-shadow: 4px 4px 25px 6px  gold;
+
+}
+
+.optdef{
+    color:black;
+}
+
+
+.opt{
+    background-color: rgba(215, 198, 103, 0.625);
+    color: black;
+
+}
+
+
+
+.itemBtn{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.itemBtn button{
+    height: 95%;
+    width: 50%;
+    border-radius: 25px;
+    font-size:25px;
+}
+
+.itemBtn button:hover{
+    cursor: pointer;
+    background-color: bisque;
+    box-shadow: 4px 4px 25px 6px  gold;
+
+}
+
+/* ***************************************************************** */
+
+
+
+
+
+.sec1rightCont{
+    height: 100%;
+    width: 35%;
+    background-color: rgb(32, 31, 31);
+    border:2px solid rgb(231, 193, 193);
+    border-radius: 25px;
+    box-shadow: 1px 4px 35px 10px rgb(205, 204, 202);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.sec1rightCont h1{
+    color: white;
+}
+
+
+.option{
+
+    height: 70%;
+    width: 90%;
+    background-color: rgb(32, 31, 31);
+    
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+
+.item{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(91, 89, 87);
+    border:2px solid rgb(208, 52, 52);
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.item:hover{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(56, 55, 50);
+    border:2px solid rgb(208, 52, 52);
+    border-radius: 25px;
+
+    box-shadow: 4px 4px 25px 6px  gold;
+    cursor: pointer;
+
+}
+
+.item a{
+    
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+

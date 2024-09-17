@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispalay Data</title>
+
+    <link rel="stylesheet" href="../static/register.css">
+    <link rel="stylesheet" href="../static/display.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="section1">
+        <h1 class="projname">Faculty Management Web Application</h1>
+        <div id="sec1Cont">
+            <div class="sec1leftCont">
+                <div class="heading">
+                    <h1>Display Details</h1>
+                </div>
+
+                <h4 id="messagebox">
+                    {% if messages %}
+                    
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                   
+                    {% endif %}
+                </h4>
+                
+                <form action="../searchdata/" method="POST" id="searchform">
+                    {%csrf_token%}
+                    
+                    <div class="initem" id="search">
+                        <select id="srhslkt" name="flopt">
+                            <option value="None" class="opt">Select</option>
+                            <option value="fId" class="opt">F Id</option>
+                            <option value="fName" class="opt">F Name</option>
+                            <option value="fDept" class="opt">F Dept</option>
+                            <option value="fSal" class="opt">F Salary</option>
+                        </select>
+                        <input type="text" name="data" placeholder="Search.... &#128269; " >
+                        <button type="submit"><i class="fa-solid fa-arrow-right"></i> </button>
+                        <a href="../display/"><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <a href="../printpdf/"><i class="fa-solid fa-print"></i></a>
+                    </div>
+                </form>
+
+                
+             
+
+                
+                
+
+                
+                <div class="dispBox">
+                   <div class="dispBoxCont">
+
+                        <table id="">
+                            <thead>
+                                <tr>
+                                    <th>Faculty Id</th>
+                                    <th>Faculty Name</th>
+                                    <th>Faculty Dept</th>
+                                    <th>Faculty Sal</th>
+                                </tr>
+                            </thead>
+
+                            
+
+                            {% for i in data %}
+
+                                <tbody>
+                                    <tr>
+                                        <td>{{i.fId}}</td>
+                                        <td>{{i.fName}}</td>
+                                        <td>{{i.fDept}}</td>
+                                        <td>{{i.fSal}}</td>
+                                    </tr>
+        
+
+                                </tbody>
+
+                            
+                            {% endfor %}
+
+
+                            
+                            {% for i in searchData %}
+
+                            <tr>
+                                <td>{{i.fId}}</td>
+                                <td>{{i.fName}}</td>
+                                <td>{{i.fDept}}</td>
+                                <td>{{i.fSal}}</td>
+                            </tr>
+
+                            {% endfor %}
+                        </table>
+
+                   
+                   </div>
+                </div>
+                    
+            </div>
+           
+
+            <!-- *********************************************************** -->
+
+            <div class="sec1rightCont">
+                <div class="heading">
+                    <h1>Facilities</h1>
+                </div>
+                <div class="option">
+                    <div class="item">
+                        <a href="/">Home</a>
+                    </div>
+                    <div class="item">
+                        <a href="../register/">Register Faculty Details</a>
+                    </div>
+                    <div class="item">
+                        <a href="../update/">Update Faculty Details</a>
+                    </div>
+                    <div class="item">
+                        <a href="../delete/">Delete Faculty Details</a>
+                    </div>
+                </div>
+            </div>
+
+
+        
+
+        </div>
+           
+    </div>
+</body>
+</html>

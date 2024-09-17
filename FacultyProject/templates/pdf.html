@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faculty Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h2>Faculty Search Results</h2>
+
+    {% if searchData %}
+    <table>
+        <thead>
+            <tr>
+                <th>Faculty Id</th>
+                <th>Faculty Name</th>
+                <th>Faulty Department</th>
+                <th>Faulty Salary</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for faculty in searchData %}
+            <tr>
+                <td>{{ faculty.fId }}</td>
+                <td>{{ faculty.fName }}</td>
+                <td>{{ faculty.fDept }}</td>
+                <td>{{ faculty.fSal }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No data found.</p>
+    {% endif %}
+</body>
+</html>

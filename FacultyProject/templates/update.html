@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Page</title>
+
+    <link rel="stylesheet" href="../static/register.css">
+</head>
+<body>
+    <div id="section1">
+        <h1 class="projname">Faculty Management Web Application</h1>
+        <div id="sec1Cont">
+            <div class="sec1leftCont">
+                <div class="heading">
+                    <h1>Update Details</h1>
+                </div>
+                <div class="inputOption">
+                    <form action="../updatedata/" method='POST'>
+
+                        {% csrf_token %}
+
+                        <div class="initem">
+                            <input type="text" name='fid' placeholder="Enter Id in Number only..">
+                        </div>
+                        
+                        <div class="initem">
+                            <input type="text" name='fname' placeholder="Enter Name of Faculty...">
+                        </div>
+                        <div class="initem">
+                            <select name="fdept" id="dept">
+                                <option value="None" class="optdef">Select Department</option>
+                                <option value="Computer Science" class="opt">Computer Science</option>
+                                <option value="Electronics Communication"  class="opt">Electronics Communication</option>
+                                <option value="Civil"  class="opt">Civil</option>
+                                <option value="Electrical"  class="opt">Electrical</option>
+                                <option value="AIML"  class="opt">AIML</option>
+                                <option value="Information Technology"  class="opt">Information Technology</option>
+                                <option value="Mechnical"  class="opt">Mechnical</option>
+                                <option value="Chemical"  class="opt">Chemical</option>
+                            </select>
+                        </div>
+                        <div class="initem">
+                            <input type="text" name='fsal' placeholder="Enter Salary of Faculty...">
+                        </div>
+                        <div class="itemBtn">
+                            <button type="submit">Submit</button>
+                        </div>
+                
+                    </form>
+                </div>
+            </div>
+           
+
+            <!-- *********************************************************** -->
+
+            <div class="sec1rightCont">
+                <div class="heading">
+                    <h1>Facilities</h1>
+                </div>
+                <div class="option">
+                    <div class="item">
+                        <a href="/">Home</a>
+                    </div>
+                    <div class="item">
+                        <a href="../display/">View Faculty Details</a>
+                    </div>
+                    <div class="item">
+                        <a href="../register/">Register Faculty Details</a>
+                    </div>
+                    <div class="item">
+                        <a href="../delete/">Delete Faculty Details</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+           
+    </div>
+</body>
+</html>
